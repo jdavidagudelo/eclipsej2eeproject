@@ -40,11 +40,11 @@
     <dependencies>
 
         <!-- Depend on the ejb module and war so that we can package them -->
-        <dependency>
+       <!--  <dependency>
             <groupId>org.jboss.tools.example</groupId>
             <artifactId>ProjectEAR-web</artifactId>
             <type>war</type>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.jboss.tools.example</groupId>
             <artifactId>ProjectEAR-ejb</artifactId>

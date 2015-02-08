@@ -369,8 +369,6 @@
 	<artifactId>myfaces-api</artifactId>
 	<version>2.2.7</version>
 </dependency>
-
-
 <dependency>
 	<groupId>org.apache.myfaces.core</groupId>
 	<artifactId>myfaces-impl</artifactId>

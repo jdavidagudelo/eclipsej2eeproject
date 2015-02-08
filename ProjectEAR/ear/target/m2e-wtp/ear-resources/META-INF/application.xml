@@ -2,12 +2,6 @@
 <application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
   <display-name>ProjectEAR-ear</display-name>
   <module>
-    <web>
-      <web-uri>ProjectEAR-web.war</web-uri>
-      <context-root>/ProjectEAR-web</context-root>
-    </web>
-  </module>
-  <module>
     <ejb>ProjectEAR-ejb.jar</ejb>
   </module>
   <library-directory>lib</library-directory>

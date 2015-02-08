@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateConceptTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_conceptId}" for="conceptId" />
+                    <h:inputText id="conceptId" value="#{conceptController.selected.conceptId}" title="#{bundle.CreateConceptTitle_conceptId}" required="true" requiredMessage="#{bundle.CreateConceptRequiredMessage_conceptId}"/>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_retired}" for="retired" />
+                    <h:inputText id="retired" value="#{conceptController.selected.retired}" title="#{bundle.CreateConceptTitle_retired}" required="true" requiredMessage="#{bundle.CreateConceptRequiredMessage_retired}"/>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_shortName}" for="shortName" />
+                    <h:inputText id="shortName" value="#{conceptController.selected.shortName}" title="#{bundle.CreateConceptTitle_shortName}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_description}" for="description" />
+                    <h:inputText id="description" value="#{conceptController.selected.description}" title="#{bundle.CreateConceptTitle_description}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_formText}" for="formText" />
+                    <h:inputText id="formText" value="#{conceptController.selected.formText}" title="#{bundle.CreateConceptTitle_formText}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_isSet}" for="isSet" />
+                    <h:inputText id="isSet" value="#{conceptController.selected.isSet}" title="#{bundle.CreateConceptTitle_isSet}" required="true" requiredMessage="#{bundle.CreateConceptRequiredMessage_isSet}"/>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_creator}" for="creator" />
+                    <h:inputText id="creator" value="#{conceptController.selected.creator}" title="#{bundle.CreateConceptTitle_creator}" required="true" requiredMessage="#{bundle.CreateConceptRequiredMessage_creator}"/>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_dateCreated}" for="dateCreated" />
+                    <h:inputText id="dateCreated" value="#{conceptController.selected.dateCreated}" title="#{bundle.CreateConceptTitle_dateCreated}" required="true" requiredMessage="#{bundle.CreateConceptRequiredMessage_dateCreated}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_defaultCharge}" for="defaultCharge" />
+                    <h:inputText id="defaultCharge" value="#{conceptController.selected.defaultCharge}" title="#{bundle.CreateConceptTitle_defaultCharge}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_version}" for="version" />
+                    <h:inputText id="version" value="#{conceptController.selected.version}" title="#{bundle.CreateConceptTitle_version}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_changedBy}" for="changedBy" />
+                    <h:inputText id="changedBy" value="#{conceptController.selected.changedBy}" title="#{bundle.CreateConceptTitle_changedBy}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_dateChanged}" for="dateChanged" />
+                    <h:inputText id="dateChanged" value="#{conceptController.selected.dateChanged}" title="#{bundle.CreateConceptTitle_dateChanged}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_retiredBy}" for="retiredBy" />
+                    <h:inputText id="retiredBy" value="#{conceptController.selected.retiredBy}" title="#{bundle.CreateConceptTitle_retiredBy}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_dateRetired}" for="dateRetired" />
+                    <h:inputText id="dateRetired" value="#{conceptController.selected.dateRetired}" title="#{bundle.CreateConceptTitle_dateRetired}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_retireReason}" for="retireReason" />
+                    <h:inputText id="retireReason" value="#{conceptController.selected.retireReason}" title="#{bundle.CreateConceptTitle_retireReason}" />
+                    <h:outputLabel value="#{bundle.CreateConceptLabel_uuid}" for="uuid" />
+                    <h:inputText id="uuid" value="#{conceptController.selected.uuid}" title="#{bundle.CreateConceptTitle_uuid}" required="true" requiredMessage="#{bundle.CreateConceptRequiredMessage_uuid}"/>
+                    
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{conceptController.create}" value="#{bundle.CreateConceptSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{conceptController.prepareList}" value="#{bundle.CreateConceptShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateConceptIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

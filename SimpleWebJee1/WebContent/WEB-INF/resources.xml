@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <Resource id="jdbc/postgresql" type="javax.sql.DataSource">#Sun Feb 08 08:18:43 COT 2015
+jdbcDriver=org.postgresql.Driver
+password=4dm\!n/tph
+userName=tph_user
+jdbcUrl=jdbc\:postgresql\://172.21.0.181\:5432/rcmedicalrecordtph
+</Resource>
+</resources>
