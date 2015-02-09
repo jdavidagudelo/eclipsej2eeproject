@@ -6,7 +6,7 @@
   <dependencies>
   <dependency>
       <groupId>org.jboss.tools.example</groupId>
-   <artifactId>ProjectEAR-ejb</artifactId>
+   <artifactId>ExampleEJB</artifactId>
       <version>0.0.1-SNAPSHOT</version>
   </dependency>
     <dependency>

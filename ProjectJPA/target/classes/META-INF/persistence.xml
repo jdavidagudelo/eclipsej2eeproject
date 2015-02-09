@@ -6,7 +6,8 @@
 	<persistence-unit name="ProjectJPA">
 	    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
 		<properties>
-
+		    <property name="openjpa.RuntimeUnenhancedClasses" value="unsupported"/>
+		        
 			<!-- Configuring JDBC properties -->
 
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://172.21.0.181:5432/rcmedicalrecordtph" />
@@ -28,6 +29,7 @@
 			<property name="hibernate.c3p0.timeout" value="500" />
 			<property name="hibernate.c3p0.max_statements" value="50" />
 			<property name="hibernate.c3p0.idle_test_period" value="2000" />
+			
 		</properties>
 		<class>model.Concept</class>
 
